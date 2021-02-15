@@ -11,7 +11,7 @@ The "password" function in password_generator.py accepts string arguments, which
 
 ## Example Passwords Generated
 
-I generated a million password just for fun, here are some of them. This took about a minute and some change and wasn't all that CPU intensive, the highest my CPU spiked to was 46%.
+I generated a million password just for fun, here are some of them. This took 124.30224013328552 seconds and wasn't all that CPU intensive, the highest my CPU spiked to was 46%.
 
 ```
 S$7h99bo&
