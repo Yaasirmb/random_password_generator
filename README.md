@@ -1,9 +1,7 @@
-# "Random" Password Generator
+# Random Password Generator
 
 ## How it Works
-This script generates pseudo random password using Python's native 'random' module. As the official [python documentation](https://docs.python.org/3/library/random.html#:~:text=The%20pseudo-random%20generators%20of%20this%20module%20should%20not%20be%20used%20for%20security%20purposes.) says, DO NOT use this forsecurity purposes. 
-
-That being said I would like to remake this or tweak it to use python's native 'secret' module so that passwords generated would be cryptographically secure.
+This script generates random passwords using Python's native 'secrets' module. As the official [python documentation](https://docs.python.org/3.8/library/secrets.html#:~:text=is%20used%20for%20generating%20cryptographically%20strong%20random%20numbers) says, it is used for generating cryptographically strong random numbers suitable for managing data such as passwords, account authentication, security tokens, and related secrets. 
 
 You can choose the length of your password and what you want to include in your password (Upper and lower case letters, or both, numbers, symbols, or all of them).
 
