@@ -10,7 +10,7 @@ punctuations = string.punctuation
 all_chars = ''.join(string.ascii_letters + string.digits + string.punctuation)
 
 def password(pass_chars,pass_len):
-    """ Function that generates a pseudo random password of a desired length and desired characters. """
+    """ Function that generates a random password of a desired length and desired characters. """
     if pass_chars == 'Uppercase':
         print(''.join(secrets.choice(upper_letters) for i in range(int(pass_len))))
     elif pass_chars == 'Lowercase':
