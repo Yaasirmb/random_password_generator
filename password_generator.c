@@ -1,29 +1,68 @@
 #include <stdio.h>
 #include <string.h>
 
-
-int password(char pass_chars,int pass_len);
-
 void main() {
 
     char user_char[15];
     char uppercase [ ] = "Uppercase";
-    int result;
+    int upper_cmp;
+    int lower_cmp;
+    int both_cmp;
+    int digit_cmp;
+    int punct_cmp;
+    int all_cmp;
+    char all_letters[ ] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    char lower_letters[ ] = "abcdefghijklmnopqrstuvwxyz";
     char upper_letters[ ] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    char digits[ ] = "0123456789";
+    char punctuations[ ] = "!\"#$%&\'()*+,-./:;<=>?@\[]^_`{|}~";
+    char all_chars[ ] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&\'()*+,-./:;<=>?@\[]^_`{|}~";
+    char *user_options[] = {"Uppercase","Lowercase","Both","Digits","Symbols","All Characters"};
+
+    /*int i;
+    char user_option;
+    for(i = 0; i < len; ++i){
+        user_option = user_options[i];
+        // Result of comparing the 2 strings together.
+        result = strcmp(user_char,user_option);
+    }*/
+    
 
     
     printf("What would you like your password to have?\n");
-    while ((result != 1) || (result != -1)){
-        gets(user_char);
+    printf("Enter 'Uppercase' for uppercase letters, 'Lowercase' for lowercase letters, or 'Both' for both,"
+    "'Digits' for numbers, and 'Punctuations' for symbols (ex: @#$%^&), and 'All Characters' for all characters.\n");
+    
+    gets(user_char);
 
-        result = strcmp(user_char,uppercase);
-        printf("%i\n",result);
+    upper_cmp = strcmp(user_char,user_options[0]);
+    lower_cmp = strcmp(user_char,user_options[1]);
+    both_cmp = strcmp(user_char,user_options[2]);
+    digit_cmp = strcmp(user_char,user_options[3]);
+    punct_cmp = strcmp(user_char,user_options[4]);
+    all_cmp = strcmp(user_char,user_options[5]);
+    
 
-        if (result == 0)
-            printf("%s\n",upper_letters);
-        else 
-            printf("These are not the same string\n");
-    }
+    if (upper_cmp == 0)
+        printf("%s\n",upper_letters);
+    else 
+        if (lower_cmp == 0)
+            printf("%s\n",lower_letters);
+    else 
+        if (both_cmp == 0)
+            printf("%s\n",all_letters);
+    else
+        if (digit_cmp == 0)
+            printf("%s\n",digits);
+    else 
+        if (punct_cmp == 0)
+            printf("%s\n",punctuations);
+    else
+        if (all_cmp == 0)
+            printf("%s\n",all_chars);
+    else
+        printf("Please select a valid option.");
+
         /*password(user_char,user_pass_len);*/
   
 };
@@ -31,30 +70,6 @@ void main() {
 
  /*int password(char pass_chars,int pass_len){
 
-    char user_char;
-    int user_pass_len;
-    int result;
-    char all_letters[ ] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    char lower_letters[ ] = "abcdefghijklmnopqrstuvwxyz";
-    char upper_letters[ ] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    char digits[ ] = "0123456789";
-    char punctuations[ ] = "!\"#$%&\'()*+,-./:;<=>?@\[]^_`{|}~";
-    char all_chars[ ] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&\'()*+,-./:;<=>?@\[]^_`{|}~";
-    char uppercase [ ] = "Uppercase";
-
-    printf("What would you like your password to contain?");
-    
-
-   else if (user_char == "Lowercase")
-        printf("%s",lower_letters);
-    else if (user_char == "Both")
-        printf("%s",all_letters);
-    else if (user_char == "Digits")
-        printf("%s",digits);
-    else if (user_char == "Punctuations")
-        printf("%s",punctuations);
-    else if (user_char == "All Characters")
-        printf("%s",all_chars);
 
 };*/
 
